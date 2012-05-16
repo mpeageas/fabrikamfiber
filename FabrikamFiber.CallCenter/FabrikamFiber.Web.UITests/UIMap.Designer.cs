@@ -31,19 +31,22 @@ namespace FabrikamFiber.Web.UITests
     {
         
         /// <summary>
-        /// Loadhttpintranetfabrikamcom - Test Case 79 - Use 'LoadhttpintranetfabrikamcomParams' to pass parameters into this method.
+        /// Loadhttp127001100 - Test Case 79 - Use 'Loadhttp127001100Params' to pass parameters into this method.
         /// </summary>
-        public void Loadhttpintranetfabrikamcom()
+        public void Loadhttp127001100()
         {
             #region Variable Declarations
-            WinButton uIFFIntranetPortalButton = this.UIBlankPageWindowsInteWindow.UIFavoritesBarToolBar.UIFFIntranetPortalButton;
+            WinEdit uIAddressandsearchusinEdit = this.UIBlankPageWindowsInteWindow.UIItemWindow.UIAddressandsearchusinEdit;
             #endregion
 
             // Go to web page 'about:blank' using new browser instance
-            this.UIBlankPageWindowsInteWindow.LaunchUrl(new System.Uri(this.LoadhttpintranetfabrikamcomParams.UIBlankPageWindowsInteWindowUrl));
+            this.UIBlankPageWindowsInteWindow.LaunchUrl(new System.Uri(this.Loadhttp127001100Params.UIBlankPageWindowsInteWindowUrl));
 
-            // Click 'FF Intranet Portal' button
-            Mouse.Click(uIFFIntranetPortalButton, new Point(67, 14));
+            // Type 'http://127.0.0.1:100/' in 'Address and search using Bing' text box
+            uIAddressandsearchusinEdit.Text = this.Loadhttp127001100Params.UIAddressandsearchusinEditText;
+
+            // Type '{Enter}' in 'Address and search using Bing' text box
+            Keyboard.SendKeys(uIAddressandsearchusinEdit, this.Loadhttp127001100Params.UIAddressandsearchusinEditSendKeys, ModifierKeys.None);
         }
         
         /// <summary>
@@ -52,11 +55,11 @@ namespace FabrikamFiber.Web.UITests
         public void ClickonCustomerslink()
         {
             #region Variable Declarations
-            HtmlHyperlink uICustomersHyperlink = this.UIHomePageWindowsInterWindow.UIHomePageDocument.UICustomersHyperlink;
+            HtmlHyperlink uICustomersHyperlink = this.UIBlankPageWindowsInteWindow.UIHomePageDocument.UICustomersHyperlink;
             #endregion
 
             // Click 'Customers' link
-            Mouse.Click(uICustomersHyperlink, new Point(33, 9));
+            Mouse.Click(uICustomersHyperlink, new Point(43, 10));
         }
         
         /// <summary>
@@ -65,15 +68,11 @@ namespace FabrikamFiber.Web.UITests
         public void ClickonCreateNewbutton()
         {
             #region Variable Declarations
-            WinClient uIDesktopClient = this.UIItemWindow.UIItemWindow1.UIDesktopClient;
             HtmlHyperlink uICreateNewHyperlink = this.UICustomersWindowsInteWindow.UICustomersDocument.UIContentCustom.UICreateNewHyperlink;
             #endregion
 
-            // Click 'Desktop' client
-            Mouse.Click(uIDesktopClient, new Point(36, 0));
-
             // Click 'Create New' link
-            Mouse.Click(uICreateNewHyperlink, new Point(58, 17));
+            Mouse.Click(uICreateNewHyperlink, new Point(64, 15));
         }
         
         /// <summary>
@@ -134,22 +133,26 @@ namespace FabrikamFiber.Web.UITests
         {
             #region Variable Declarations
             HtmlInputButton uICreateButton = this.UICreateWindowsInterneWindow.UICreateDocument.UIContentCustom.UICreateButton;
+            WinButton uICloseButton = this.UICustomersWindowsInteWindow.UICustomersWindowsInteTitleBar.UICloseButton;
             #endregion
 
             // Click 'Create' button
-            Mouse.Click(uICreateButton, new Point(95, 14));
+            Mouse.Click(uICreateButton, new Point(146, 19));
+
+            // Click 'Close' button
+            Mouse.Click(uICloseButton, new Point(22, 7));
         }
         
         #region Properties
-        public virtual LoadhttpintranetfabrikamcomParams LoadhttpintranetfabrikamcomParams
+        public virtual Loadhttp127001100Params Loadhttp127001100Params
         {
             get
             {
-                if ((this.mLoadhttpintranetfabrikamcomParams == null))
+                if ((this.mLoadhttp127001100Params == null))
                 {
-                    this.mLoadhttpintranetfabrikamcomParams = new LoadhttpintranetfabrikamcomParams();
+                    this.mLoadhttp127001100Params = new Loadhttp127001100Params();
                 }
-                return this.mLoadhttpintranetfabrikamcomParams;
+                return this.mLoadhttp127001100Params;
             }
         }
         
@@ -174,30 +177,6 @@ namespace FabrikamFiber.Web.UITests
                     this.mUIBlankPageWindowsInteWindow = new UIBlankPageWindowsInteWindow();
                 }
                 return this.mUIBlankPageWindowsInteWindow;
-            }
-        }
-        
-        public UIHomePageWindowsInterWindow UIHomePageWindowsInterWindow
-        {
-            get
-            {
-                if ((this.mUIHomePageWindowsInterWindow == null))
-                {
-                    this.mUIHomePageWindowsInterWindow = new UIHomePageWindowsInterWindow();
-                }
-                return this.mUIHomePageWindowsInterWindow;
-            }
-        }
-        
-        public UIItemWindow UIItemWindow
-        {
-            get
-            {
-                if ((this.mUIItemWindow == null))
-                {
-                    this.mUIItemWindow = new UIItemWindow();
-                }
-                return this.mUIItemWindow;
             }
         }
         
@@ -227,15 +206,11 @@ namespace FabrikamFiber.Web.UITests
         #endregion
         
         #region Fields
-        private LoadhttpintranetfabrikamcomParams mLoadhttpintranetfabrikamcomParams;
+        private Loadhttp127001100Params mLoadhttp127001100Params;
         
         private EntercustomerdetailsFirstNameLastNameStreetCityStateZipParams mEntercustomerdetailsFirstNameLastNameStreetCityStateZipParams;
         
         private UIBlankPageWindowsInteWindow mUIBlankPageWindowsInteWindow;
-        
-        private UIHomePageWindowsInterWindow mUIHomePageWindowsInterWindow;
-        
-        private UIItemWindow mUIItemWindow;
         
         private UICustomersWindowsInteWindow mUICustomersWindowsInteWindow;
         
@@ -244,10 +219,10 @@ namespace FabrikamFiber.Web.UITests
     }
     
     /// <summary>
-    /// Parameters to be passed into 'Loadhttpintranetfabrikamcom'
+    /// Parameters to be passed into 'Loadhttp127001100'
     /// </summary>
     [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class LoadhttpintranetfabrikamcomParams
+    public class Loadhttp127001100Params
     {
         
         #region Fields
@@ -255,6 +230,16 @@ namespace FabrikamFiber.Web.UITests
         /// Go to web page 'about:blank' using new browser instance
         /// </summary>
         public string UIBlankPageWindowsInteWindowUrl = "about:blank";
+        
+        /// <summary>
+        /// Type 'http://127.0.0.1:100/' in 'Address and search using Bing' text box
+        /// </summary>
+        public string UIAddressandsearchusinEditText = "http://127.0.0.1:100/";
+        
+        /// <summary>
+        /// Type '{Enter}' in 'Address and search using Bing' text box
+        /// </summary>
+        public string UIAddressandsearchusinEditSendKeys = "{Enter}";
         #endregion
     }
     
@@ -338,78 +323,6 @@ namespace FabrikamFiber.Web.UITests
             this.SearchProperties[UITestControl.PropertyNames.Name] = "Blank Page";
             this.SearchProperties[UITestControl.PropertyNames.ClassName] = "IEFrame";
             this.WindowTitles.Add("Blank Page");
-            #endregion
-        }
-        
-        public void LaunchUrl(System.Uri url)
-        {
-            this.CopyFrom(BrowserWindow.Launch(url));
-        }
-        
-        #region Properties
-        public UIFavoritesBarToolBar UIFavoritesBarToolBar
-        {
-            get
-            {
-                if ((this.mUIFavoritesBarToolBar == null))
-                {
-                    this.mUIFavoritesBarToolBar = new UIFavoritesBarToolBar(this);
-                }
-                return this.mUIFavoritesBarToolBar;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIFavoritesBarToolBar mUIFavoritesBarToolBar;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIFavoritesBarToolBar : WinToolBar
-    {
-        
-        public UIFavoritesBarToolBar(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinToolBar.PropertyNames.Name] = "Favorites Bar";
-            this.WindowTitles.Add("Blank Page");
-            #endregion
-        }
-        
-        #region Properties
-        public WinButton UIFFIntranetPortalButton
-        {
-            get
-            {
-                if ((this.mUIFFIntranetPortalButton == null))
-                {
-                    this.mUIFFIntranetPortalButton = new WinButton(this);
-                    #region Search Criteria
-                    this.mUIFFIntranetPortalButton.SearchProperties[WinButton.PropertyNames.Name] = "FF Intranet Portal";
-                    this.mUIFFIntranetPortalButton.WindowTitles.Add("Blank Page");
-                    #endregion
-                }
-                return this.mUIFFIntranetPortalButton;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinButton mUIFFIntranetPortalButton;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIHomePageWindowsInterWindow : BrowserWindow
-    {
-        
-        public UIHomePageWindowsInterWindow()
-        {
-            #region Search Criteria
-            this.SearchProperties[UITestControl.PropertyNames.Name] = "Home Page";
-            this.SearchProperties[UITestControl.PropertyNames.ClassName] = "IEFrame";
             this.WindowTitles.Add("Home Page");
             #endregion
         }
@@ -420,6 +333,18 @@ namespace FabrikamFiber.Web.UITests
         }
         
         #region Properties
+        public UIItemWindow UIItemWindow
+        {
+            get
+            {
+                if ((this.mUIItemWindow == null))
+                {
+                    this.mUIItemWindow = new UIItemWindow(this);
+                }
+                return this.mUIItemWindow;
+            }
+        }
+        
         public UIHomePageDocument UIHomePageDocument
         {
             get
@@ -434,7 +359,47 @@ namespace FabrikamFiber.Web.UITests
         #endregion
         
         #region Fields
+        private UIItemWindow mUIItemWindow;
+        
         private UIHomePageDocument mUIHomePageDocument;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
+    public class UIItemWindow : WinWindow
+    {
+        
+        public UIItemWindow(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "41477";
+            this.WindowTitles.Add("Blank Page");
+            this.WindowTitles.Add("Home Page");
+            #endregion
+        }
+        
+        #region Properties
+        public WinEdit UIAddressandsearchusinEdit
+        {
+            get
+            {
+                if ((this.mUIAddressandsearchusinEdit == null))
+                {
+                    this.mUIAddressandsearchusinEdit = new WinEdit(this);
+                    #region Search Criteria
+                    this.mUIAddressandsearchusinEdit.SearchProperties[WinEdit.PropertyNames.Name] = "Address and search using Bing";
+                    this.mUIAddressandsearchusinEdit.WindowTitles.Add("Blank Page");
+                    this.mUIAddressandsearchusinEdit.WindowTitles.Add("Home Page");
+                    #endregion
+                }
+                return this.mUIAddressandsearchusinEdit;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinEdit mUIAddressandsearchusinEdit;
         #endregion
     }
     
@@ -451,7 +416,7 @@ namespace FabrikamFiber.Web.UITests
             this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
             this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Home Page";
             this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/";
-            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://intranet.fabrikam.com/";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://127.0.0.1:100/";
             this.WindowTitles.Add("Home Page");
             #endregion
         }
@@ -471,7 +436,7 @@ namespace FabrikamFiber.Web.UITests
                     this.mUICustomersHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Customers";
                     this.mUICustomersHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Customers";
                     this.mUICustomersHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
-                    this.mUICustomersHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://intranet.fabrikam.com/Customers";
+                    this.mUICustomersHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://127.0.0.1:100/Customers";
                     this.mUICustomersHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = null;
                     this.mUICustomersHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "href=\"/Customers\"";
                     this.mUICustomersHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "3";
@@ -485,68 +450,6 @@ namespace FabrikamFiber.Web.UITests
         
         #region Fields
         private HtmlHyperlink mUICustomersHyperlink;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIItemWindow : WinWindow
-    {
-        
-        public UIItemWindow()
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.AccessibleName] = "Desktop";
-            this.SearchProperties[WinWindow.PropertyNames.ClassName] = "#32769";
-            #endregion
-        }
-        
-        #region Properties
-        public UIItemWindow1 UIItemWindow1
-        {
-            get
-            {
-                if ((this.mUIItemWindow1 == null))
-                {
-                    this.mUIItemWindow1 = new UIItemWindow1(this);
-                }
-                return this.mUIItemWindow1;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private UIItemWindow1 mUIItemWindow1;
-        #endregion
-    }
-    
-    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
-    public class UIItemWindow1 : WinWindow
-    {
-        
-        public UIItemWindow1(UITestControl searchLimitContainer) : 
-                base(searchLimitContainer)
-        {
-            #region Search Criteria
-            this.SearchProperties[WinWindow.PropertyNames.ControlId] = "303";
-            #endregion
-        }
-        
-        #region Properties
-        public WinClient UIDesktopClient
-        {
-            get
-            {
-                if ((this.mUIDesktopClient == null))
-                {
-                    this.mUIDesktopClient = new WinClient(this);
-                }
-                return this.mUIDesktopClient;
-            }
-        }
-        #endregion
-        
-        #region Fields
-        private WinClient mUIDesktopClient;
         #endregion
     }
     
@@ -580,10 +483,24 @@ namespace FabrikamFiber.Web.UITests
                 return this.mUICustomersDocument;
             }
         }
+        
+        public UICustomersWindowsInteTitleBar UICustomersWindowsInteTitleBar
+        {
+            get
+            {
+                if ((this.mUICustomersWindowsInteTitleBar == null))
+                {
+                    this.mUICustomersWindowsInteTitleBar = new UICustomersWindowsInteTitleBar(this);
+                }
+                return this.mUICustomersWindowsInteTitleBar;
+            }
+        }
         #endregion
         
         #region Fields
         private UICustomersDocument mUICustomersDocument;
+        
+        private UICustomersWindowsInteTitleBar mUICustomersWindowsInteTitleBar;
         #endregion
     }
     
@@ -600,7 +517,7 @@ namespace FabrikamFiber.Web.UITests
             this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
             this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Customers";
             this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Customers";
-            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://intranet.fabrikam.com/Customers";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://127.0.0.1:100/Customers";
             this.WindowTitles.Add("Customers");
             #endregion
         }
@@ -657,7 +574,7 @@ namespace FabrikamFiber.Web.UITests
                     this.mUICreateNewHyperlink.SearchProperties[HtmlHyperlink.PropertyNames.InnerText] = "Create New";
                     this.mUICreateNewHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.AbsolutePath] = "/Customers/Create";
                     this.mUICreateNewHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Title] = null;
-                    this.mUICreateNewHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://intranet.fabrikam.com/Customers/Create";
+                    this.mUICreateNewHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Href] = "http://127.0.0.1:100/Customers/Create";
                     this.mUICreateNewHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.Class] = "glossyBox createNew";
                     this.mUICreateNewHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.ControlDefinition] = "class=\"glossyBox createNew\" href=\"/Custo";
                     this.mUICreateNewHyperlink.FilterProperties[HtmlHyperlink.PropertyNames.TagInstance] = "1";
@@ -671,6 +588,41 @@ namespace FabrikamFiber.Web.UITests
         
         #region Fields
         private HtmlHyperlink mUICreateNewHyperlink;
+        #endregion
+    }
+    
+    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
+    public class UICustomersWindowsInteTitleBar : WinTitleBar
+    {
+        
+        public UICustomersWindowsInteTitleBar(UITestControl searchLimitContainer) : 
+                base(searchLimitContainer)
+        {
+            #region Search Criteria
+            this.WindowTitles.Add("Customers");
+            #endregion
+        }
+        
+        #region Properties
+        public WinButton UICloseButton
+        {
+            get
+            {
+                if ((this.mUICloseButton == null))
+                {
+                    this.mUICloseButton = new WinButton(this);
+                    #region Search Criteria
+                    this.mUICloseButton.SearchProperties[WinButton.PropertyNames.Name] = "Close";
+                    this.mUICloseButton.WindowTitles.Add("Customers");
+                    #endregion
+                }
+                return this.mUICloseButton;
+            }
+        }
+        #endregion
+        
+        #region Fields
+        private WinButton mUICloseButton;
         #endregion
     }
     
@@ -724,7 +676,7 @@ namespace FabrikamFiber.Web.UITests
             this.SearchProperties[HtmlDocument.PropertyNames.FrameDocument] = "False";
             this.FilterProperties[HtmlDocument.PropertyNames.Title] = "Create";
             this.FilterProperties[HtmlDocument.PropertyNames.AbsolutePath] = "/Customers/Create";
-            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://intranet.fabrikam.com/Customers/Create";
+            this.FilterProperties[HtmlDocument.PropertyNames.PageUrl] = "http://127.0.0.1:100/Customers/Create";
             this.WindowTitles.Add("Create");
             #endregion
         }

@@ -1,4 +1,4 @@
-﻿REM set build path
+REM set build path
 set buildpath=%1
 
 REM set deployment path

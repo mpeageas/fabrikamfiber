@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="eadac85a-d2f2-48e8-8144-d7c993e699b7" AssemblyVersion="11.0.50727.1" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
+<UITest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="" Id="b32ba42a-3080-4862-8566-af449a615230" AssemblyVersion="11.0.50727.1" Version="1.0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamTest/UITest/2010">
   <Configuration>
     <Group Name="IE">
       <Setting Name="Version" Value="9.0.8112.16421" WarningLevel="1" />
@@ -54,16 +54,18 @@
       <Url>about:blank</Url>
       <NewInstance>true</NewInstance>
     </NavigateToUrlAction>
-    <MouseAction UIObjectName="UIMap.UIBlankPageWindowsInteWindow.UIFavoritesBarToolBar.UIFFIntranetPortalButton">
+    <SetValueAction UIObjectName="UIMap.UIBlankPageWindowsInteWindow.UIItemWindow.UIAddressandsearchusinEdit">
+      <ParameterName />
+      <Value Encoded="false">http://127.0.0.1:100/</Value>
+      <Type>String</Type>
+    </SetValueAction>
+    <SendKeysAction UIObjectName="UIMap.UIBlankPageWindowsInteWindow.UIItemWindow.UIAddressandsearchusinEdit">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="67" Y="14" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
-    <TestStepMarkerAction MarkerInformation="Loadhttpintranetfabrikamcom">
+      <Text Encoded="false">{Enter}</Text>
+    </SendKeysAction>
+    <TestStepMarkerAction MarkerInformation="Loadhttp127001100">
       <ParameterName />
       <StepId>0</StepId>
       <Direction>Both</Direction>
@@ -72,11 +74,11 @@
       <WorkItemId>79</WorkItemId>
       <MarkerRegionType>Default</MarkerRegionType>
     </TestStepMarkerAction>
-    <MouseAction UIObjectName="UIMap.UIHomePageWindowsInterWindow.UIHomePageDocument.UICustomersHyperlink">
+    <MouseAction UIObjectName="UIMap.UIBlankPageWindowsInteWindow.UIHomePageDocument.UICustomersHyperlink">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="33" Y="9" />
+      <Location X="43" Y="10" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -90,20 +92,11 @@
       <WorkItemId>79</WorkItemId>
       <MarkerRegionType>Default</MarkerRegionType>
     </TestStepMarkerAction>
-    <MouseAction UIObjectName="UIMap.UIItemWindow.UIItemWindow1.UIDesktopClient">
-      <ParameterName />
-      <ModifierKeys>None</ModifierKeys>
-      <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="36" Y="0" />
-      <WheelDirection>0</WheelDirection>
-      <ActionType>Click</ActionType>
-      <MouseButton>Left</MouseButton>
-    </MouseAction>
     <MouseAction UIObjectName="UIMap.UICustomersWindowsInteWindow.UICustomersDocument.UIContentCustom.UICreateNewHyperlink">
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="58" Y="17" />
+      <Location X="64" Y="15" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -196,7 +189,16 @@
       <ParameterName />
       <ModifierKeys>None</ModifierKeys>
       <IsGlobalHotkey>false</IsGlobalHotkey>
-      <Location X="95" Y="14" />
+      <Location X="146" Y="19" />
+      <WheelDirection>0</WheelDirection>
+      <ActionType>Click</ActionType>
+      <MouseButton>Left</MouseButton>
+    </MouseAction>
+    <MouseAction UIObjectName="UIMap.UICustomersWindowsInteWindow.UICustomersWindowsInteTitleBar.UICloseButton">
+      <ParameterName />
+      <ModifierKeys>None</ModifierKeys>
+      <IsGlobalHotkey>false</IsGlobalHotkey>
+      <Location X="22" Y="7" />
       <WheelDirection>0</WheelDirection>
       <ActionType>Click</ActionType>
       <MouseButton>Left</MouseButton>
@@ -225,10 +227,11 @@
   <Maps>
     <UIMap Id="UIMap">
       <TopLevelWindows>
-        <TopLevelWindow ControlType="Window" Id="UIBlankPageWindowsInteWindow" FriendlyName="Blank Page - Windows Internet Explorer" SpecialControlType="BrowserWindow" SessionId="262654">
+        <TopLevelWindow ControlType="Window" Id="UIBlankPageWindowsInteWindow" FriendlyName="Blank Page - Windows Internet Explorer" SpecialControlType="BrowserWindow" SessionId="655838">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles>
             <WindowTitle>Blank Page</WindowTitle>
+            <WindowTitle>Home Page</WindowTitle>
           </WindowTitles>
           <SearchConfigurations>
             <SearchConfiguration>VisibleOnly</SearchConfiguration>
@@ -240,54 +243,39 @@
           </AndCondition>
           <SupportLevel>0</SupportLevel>
           <Descendants>
-            <UIObject ControlType="ToolBar" Id="UIFavoritesBarToolBar" FriendlyName="Favorites Bar" SpecialControlType="None">
+            <UIObject ControlType="Window" Id="UIItemWindow" FriendlyName="" SpecialControlType="None">
               <TechnologyName>MSAA</TechnologyName>
               <WindowTitles>
                 <WindowTitle>Blank Page</WindowTitle>
+                <WindowTitle>Home Page</WindowTitle>
               </WindowTitles>
               <SearchConfigurations>
                 <SearchConfiguration>VisibleOnly</SearchConfiguration>
               </SearchConfigurations>
               <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="Name">Favorites Bar</PropertyCondition>
-                <PropertyCondition Name="ControlType">ToolBar</PropertyCondition>
+                <PropertyCondition Name="ControlId">41477</PropertyCondition>
+                <PropertyCondition Name="ControlType">Window</PropertyCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
               <Descendants>
-                <UIObject ControlType="Button" Id="UIFFIntranetPortalButton" FriendlyName="FF Intranet Portal" SpecialControlType="None">
+                <UIObject ControlType="Edit" Id="UIAddressandsearchusinEdit" FriendlyName="Address and search using Bing" SpecialControlType="None">
                   <TechnologyName>MSAA</TechnologyName>
                   <WindowTitles>
                     <WindowTitle>Blank Page</WindowTitle>
+                    <WindowTitle>Home Page</WindowTitle>
                   </WindowTitles>
                   <SearchConfigurations>
                     <SearchConfiguration>VisibleOnly</SearchConfiguration>
                   </SearchConfigurations>
                   <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="Name">FF Intranet Portal</PropertyCondition>
-                    <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                    <PropertyCondition Name="Name">Address and search using Bing</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Edit</PropertyCondition>
                   </AndCondition>
                   <SupportLevel>0</SupportLevel>
                   <Descendants />
                 </UIObject>
               </Descendants>
             </UIObject>
-          </Descendants>
-        </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UIHomePageWindowsInterWindow" FriendlyName="Home Page - Windows Internet Explorer" SpecialControlType="BrowserWindow" SessionId="262654">
-          <TechnologyName>MSAA</TechnologyName>
-          <WindowTitles>
-            <WindowTitle>Home Page</WindowTitle>
-          </WindowTitles>
-          <SearchConfigurations>
-            <SearchConfiguration>VisibleOnly</SearchConfiguration>
-          </SearchConfigurations>
-          <AndCondition Id="SearchCondition">
-            <PropertyCondition Name="Name">Home Page</PropertyCondition>
-            <PropertyCondition Name="ClassName">IEFrame</PropertyCondition>
-            <PropertyCondition Name="ControlType">Window</PropertyCondition>
-          </AndCondition>
-          <SupportLevel>0</SupportLevel>
-          <Descendants>
             <UIObject ControlType="Document" Id="UIHomePageDocument" FriendlyName="Home Page" SpecialControlType="None">
               <TechnologyName>Web</TechnologyName>
               <WindowTitles>
@@ -304,7 +292,7 @@
                 <FilterCondition Id="Secondary">
                   <PropertyCondition Name="Title">Home Page</PropertyCondition>
                   <PropertyCondition Name="AbsolutePath">/</PropertyCondition>
-                  <PropertyCondition Name="PageUrl">http://intranet.fabrikam.com/</PropertyCondition>
+                  <PropertyCondition Name="PageUrl">http://127.0.0.1:100/</PropertyCondition>
                 </FilterCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
@@ -326,7 +314,7 @@
                     <FilterCondition Id="Secondary">
                       <PropertyCondition Name="AbsolutePath">/Customers</PropertyCondition>
                       <PropertyCondition Name="Title" />
-                      <PropertyCondition Name="Href">http://intranet.fabrikam.com/Customers</PropertyCondition>
+                      <PropertyCondition Name="Href">http://127.0.0.1:100/Customers</PropertyCondition>
                       <PropertyCondition Name="Class" />
                       <PropertyCondition Name="ControlDefinition">href="/Customers"</PropertyCondition>
                       <PropertyCondition Name="TagInstance">3</PropertyCondition>
@@ -339,48 +327,7 @@
             </UIObject>
           </Descendants>
         </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UIItemWindow" FriendlyName="" SpecialControlType="None" SessionId="65552">
-          <TechnologyName>MSAA</TechnologyName>
-          <WindowTitles />
-          <SearchConfigurations>
-            <SearchConfiguration>VisibleOnly</SearchConfiguration>
-          </SearchConfigurations>
-          <AndCondition Id="SearchCondition">
-            <PropertyCondition Name="AccessibleName">Desktop</PropertyCondition>
-            <PropertyCondition Name="ClassName">#32769</PropertyCondition>
-            <PropertyCondition Name="ControlType">Window</PropertyCondition>
-          </AndCondition>
-          <SupportLevel>0</SupportLevel>
-          <Descendants>
-            <UIObject ControlType="Window" Id="UIItemWindow1" FriendlyName="" SpecialControlType="None">
-              <TechnologyName>MSAA</TechnologyName>
-              <WindowTitles />
-              <SearchConfigurations>
-                <SearchConfiguration>VisibleOnly</SearchConfiguration>
-              </SearchConfigurations>
-              <AndCondition Id="SearchCondition">
-                <PropertyCondition Name="ControlId">303</PropertyCondition>
-                <PropertyCondition Name="ControlType">Window</PropertyCondition>
-              </AndCondition>
-              <SupportLevel>0</SupportLevel>
-              <Descendants>
-                <UIObject ControlType="Client" Id="UIDesktopClient" FriendlyName="Desktop" SpecialControlType="None">
-                  <TechnologyName>MSAA</TechnologyName>
-                  <WindowTitles />
-                  <SearchConfigurations>
-                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
-                  </SearchConfigurations>
-                  <AndCondition Id="SearchCondition">
-                    <PropertyCondition Name="ControlType">Client</PropertyCondition>
-                  </AndCondition>
-                  <SupportLevel>0</SupportLevel>
-                  <Descendants />
-                </UIObject>
-              </Descendants>
-            </UIObject>
-          </Descendants>
-        </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UICustomersWindowsInteWindow" FriendlyName="Customers - Windows Internet Explorer" SpecialControlType="BrowserWindow" SessionId="262654">
+        <TopLevelWindow ControlType="Window" Id="UICustomersWindowsInteWindow" FriendlyName="Customers - Windows Internet Explorer" SpecialControlType="BrowserWindow" SessionId="655838">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles>
             <WindowTitle>Customers</WindowTitle>
@@ -411,7 +358,7 @@
                 <FilterCondition Id="Secondary">
                   <PropertyCondition Name="Title">Customers</PropertyCondition>
                   <PropertyCondition Name="AbsolutePath">/Customers</PropertyCondition>
-                  <PropertyCondition Name="PageUrl">http://intranet.fabrikam.com/Customers</PropertyCondition>
+                  <PropertyCondition Name="PageUrl">http://127.0.0.1:100/Customers</PropertyCondition>
                 </FilterCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
@@ -453,7 +400,7 @@
                         <FilterCondition Id="Secondary">
                           <PropertyCondition Name="AbsolutePath">/Customers/Create</PropertyCondition>
                           <PropertyCondition Name="Title" />
-                          <PropertyCondition Name="Href">http://intranet.fabrikam.com/Customers/Create</PropertyCondition>
+                          <PropertyCondition Name="Href">http://127.0.0.1:100/Customers/Create</PropertyCondition>
                           <PropertyCondition Name="Class">glossyBox createNew</PropertyCondition>
                           <PropertyCondition Name="ControlDefinition">class="glossyBox createNew" href="/Custo</PropertyCondition>
                           <PropertyCondition Name="TagInstance">1</PropertyCondition>
@@ -466,9 +413,39 @@
                 </UIObject>
               </Descendants>
             </UIObject>
+            <UIObject ControlType="TitleBar" Id="UICustomersWindowsInteTitleBar" FriendlyName="Customers - Windows Internet Explorer" SpecialControlType="None">
+              <TechnologyName>MSAA</TechnologyName>
+              <WindowTitles>
+                <WindowTitle>Customers</WindowTitle>
+              </WindowTitles>
+              <SearchConfigurations>
+                <SearchConfiguration>VisibleOnly</SearchConfiguration>
+              </SearchConfigurations>
+              <AndCondition Id="SearchCondition">
+                <PropertyCondition Name="ControlType">TitleBar</PropertyCondition>
+              </AndCondition>
+              <SupportLevel>0</SupportLevel>
+              <Descendants>
+                <UIObject ControlType="Button" Id="UICloseButton" FriendlyName="Close" SpecialControlType="None">
+                  <TechnologyName>MSAA</TechnologyName>
+                  <WindowTitles>
+                    <WindowTitle>Customers</WindowTitle>
+                  </WindowTitles>
+                  <SearchConfigurations>
+                    <SearchConfiguration>VisibleOnly</SearchConfiguration>
+                  </SearchConfigurations>
+                  <AndCondition Id="SearchCondition">
+                    <PropertyCondition Name="Name">Close</PropertyCondition>
+                    <PropertyCondition Name="ControlType">Button</PropertyCondition>
+                  </AndCondition>
+                  <SupportLevel>0</SupportLevel>
+                  <Descendants />
+                </UIObject>
+              </Descendants>
+            </UIObject>
           </Descendants>
         </TopLevelWindow>
-        <TopLevelWindow ControlType="Window" Id="UICreateWindowsInterneWindow" FriendlyName="Create - Windows Internet Explorer" SpecialControlType="BrowserWindow" SessionId="262654">
+        <TopLevelWindow ControlType="Window" Id="UICreateWindowsInterneWindow" FriendlyName="Create - Windows Internet Explorer" SpecialControlType="BrowserWindow" SessionId="655838">
           <TechnologyName>MSAA</TechnologyName>
           <WindowTitles>
             <WindowTitle>Create</WindowTitle>
@@ -499,7 +476,7 @@
                 <FilterCondition Id="Secondary">
                   <PropertyCondition Name="Title">Create</PropertyCondition>
                   <PropertyCondition Name="AbsolutePath">/Customers/Create</PropertyCondition>
-                  <PropertyCondition Name="PageUrl">http://intranet.fabrikam.com/Customers/Create</PropertyCondition>
+                  <PropertyCondition Name="PageUrl">http://127.0.0.1:100/Customers/Create</PropertyCondition>
                 </FilterCondition>
               </AndCondition>
               <SupportLevel>0</SupportLevel>
