@@ -3,7 +3,7 @@
     using System.Collections.Generic;
 
     using FabrikamFiber.DAL.Models;
-
+    
     public class AssignViewModel
     {
         public ServiceTicket ServiceTicket { get; set; }

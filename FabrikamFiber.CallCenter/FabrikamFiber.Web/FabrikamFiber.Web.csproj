@@ -130,6 +130,9 @@
     <Content Include="Content\images\maps\map1.png" />
     <Content Include="Content\images\userphoto_kensanchez.jpg" />
     <Content Include="Content\style.css" />
+    <None Include="Deploy\deploy.bat">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="Scripts\jquery.uitablefilter.js" />
     <Compile Include="ViewModels\AssignViewModel.cs" />
     <Compile Include="ViewModels\EmployeeReportViewModel.cs" />
