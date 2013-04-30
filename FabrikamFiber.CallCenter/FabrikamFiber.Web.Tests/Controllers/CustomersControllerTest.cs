@@ -32,6 +32,13 @@
         }
 
         [TestMethod()]
+        [ExpectedException(typeof(NullReferenceException))]
+        public void CreateNullCustomer()
+        {
+            controller.Create(null);
+        }
+
+        [TestMethod()]
         public void EditUpdatesCustomerAndSaves()
         {
             controller.Edit(new Customer());
