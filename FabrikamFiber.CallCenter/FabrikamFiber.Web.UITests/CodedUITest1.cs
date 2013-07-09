@@ -15,18 +15,17 @@ namespace FabrikamFiber.Web.UITests
     /// <summary>
     /// Summary description for CodedUITest1
     /// </summary>
-    //[CodedUITest]
+    [CodedUITest]
     public class CodedUITest1
     {
         public CodedUITest1()
         {
         }
 
-        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.TestCase", "http://vsalm:8080/tfs/fabrikamfibercollection;FabrikamFiber", "79", DataAccessMethod.Sequential), TestMethod]
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.TestCase", "http://vsalm:8080/tfs/fabrikamfibercollection;FabrikamFiber", "244", DataAccessMethod.Sequential), TestMethod]
         public void CodedUITestMethod1()
         {
             // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-            // For more information on generated code, see http://go.microsoft.com/fwlink/?LinkId=179463
             this.UIMap.Loadhttp127001100();
             this.UIMap.ClickonCustomerslink();
             this.UIMap.ClickonCreateNewbutton();
@@ -49,7 +48,6 @@ namespace FabrikamFiber.Web.UITests
         //public void MyTestInitialize()
         //{        
         //    // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-        //    // For more information on generated code, see http://go.microsoft.com/fwlink/?LinkId=179463
         //}
 
         ////Use TestCleanup to run code after each test has run
@@ -57,7 +55,6 @@ namespace FabrikamFiber.Web.UITests
         //public void MyTestCleanup()
         //{        
         //    // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.
-        //    // For more information on generated code, see http://go.microsoft.com/fwlink/?LinkId=179463
         //}
 
         #endregion
