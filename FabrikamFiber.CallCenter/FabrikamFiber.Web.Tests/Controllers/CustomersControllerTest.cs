@@ -32,7 +32,7 @@
         }
 
         [TestMethod()]
-        [ExpectedException(typeof(NullReferenceException))]
+        [ExpectedException(typeof(ArgumentNullException))]
         public void CreateNullCustomer()
         {
             controller.Create(null);
