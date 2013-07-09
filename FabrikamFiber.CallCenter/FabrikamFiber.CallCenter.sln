@@ -15,30 +15,7 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabrikamFiber.Web.UITests", "FabrikamFiber.Web.UITests\FabrikamFiber.Web.UITests.csproj", "{5174F6A7-3D77-4314-B5F2-0B4EAA031F0C}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://vsalm:8080/tfs/fabrikamfibercollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = FabrikamFiber.Web\\FabrikamFiber.Web.csproj
-		SccProjectName1 = FabrikamFiber.Web
-		SccLocalPath1 = FabrikamFiber.Web
-		SccProjectUniqueName2 = FabrikamFiber.Web.Tests\\FabrikamFiber.Web.Tests.csproj
-		SccProjectName2 = FabrikamFiber.Web.Tests
-		SccLocalPath2 = FabrikamFiber.Web.Tests
-		SccProjectUniqueName3 = FabrikamFiber.Extranet.Web\\FabrikamFiber.Extranet.Web.csproj
-		SccProjectName3 = FabrikamFiber.Extranet.Web
-		SccLocalPath3 = FabrikamFiber.Extranet.Web
-		SccProjectUniqueName4 = FabrikamFiber.Extranet.Web.Tests\\FabrikamFiber.Extranet.Web.Tests.csproj
-		SccProjectName4 = FabrikamFiber.Extranet.Web.Tests
-		SccLocalPath4 = FabrikamFiber.Extranet.Web.Tests
-		SccProjectUniqueName5 = FabrikamFiber.DAL\\FabrikamFiber.DAL.csproj
-		SccProjectName5 = FabrikamFiber.DAL
-		SccLocalPath5 = FabrikamFiber.DAL
-		SccProjectUniqueName6 = FabrikamFiber.Web.UITests\\FabrikamFiber.Web.UITests.csproj
-		SccProjectName6 = FabrikamFiber.Web.UITests
-		SccLocalPath6 = FabrikamFiber.Web.UITests
-	EndGlobalSection
+	
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
